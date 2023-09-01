@@ -37,7 +37,6 @@ function handlePhotoClick(event) {
   const modal = basicLightbox.create(`<img
       class="gallery__image"
       src="${event.target.dataset.source}"
-      data-source="${original}"
       alt="${event.target.alt}"
     />`);
 
