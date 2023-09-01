@@ -39,37 +39,13 @@ function handlePhotoClick(event) {
       src="${event.target.dataset.source}"
       alt="${event.target.alt}"
     />`);
-
-  // const targetElement = event.target.closest(".gallery__item");
-
-  // const original =
-  //   targetElement.querySelector(".gallery__image").dataset.source;
-  // const description = targetElement.querySelector(".gallery__image").alt;
-
-  // const instance = basicLightbox.create(`<div class="modal">
-  //   <img
-  //     class="gallery__image"
-  //     src="${original}"
-  //     data-source="${original}"
-  //     alt="${description}"
-  //   />
-  // </div>`);
   modal.show();
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modal.close();
+    }
+  });
 }
-
-// document.querySelector(".gallery").addEventListener("click", (event) => {
-//   event.preventDefault();
-
-//   if (event.target.nodeName === "IMG") {
-//     const source = event.target.dataset.source;
-
-//     const instance = basicLightbox.create(
-//       `<img src="${source}" width="800" height="600">`
-//     );
-//     instance.show();
-//   }
-// });
-
-// createGallery();
 
 console.log(galleryItems);
