@@ -39,7 +39,8 @@ function handlePhotoClick(event) {
   const lightbox = new SimpleLightbox(".gallery a", {
     sourceAttr: "$data-source",
   });
-  lightbox.show();
+  // lightbox.show();
+  console.log(lightbox);
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
