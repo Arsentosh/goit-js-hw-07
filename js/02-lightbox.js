@@ -36,8 +36,12 @@ function handlePhotoClick(event) {
 
   //       />`);
 
-  const lightbox = new SimpleLightbox(".gallery a", {
-    sourceAttr: "$data-source",
+  // const lightbox =
+
+  new SimpleLightbox(".gallery a", {
+    sourceAttr: "href",
+    captionsData: "alt",
+    captionDelay: 10,
   });
   // lightbox.show();
   console.log(lightbox);
